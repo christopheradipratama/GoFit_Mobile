@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_JadwalPresensiMember"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="5dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_JadwalPresensiMember"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/tv_KodeBooking"
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:textSize="25sp"
+            android:maxLines="2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Kode Booking"/>
+
+        <TextView
+            android:id="@+id/tv_TanggalBookingKelas"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="Tanggal Booking Kelas"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_KodeBooking"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_TanggalMelakukanBooking"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Tanggal Melakukan Booking"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_TanggalBookingKelas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_status"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_TanggalMelakukanBooking"
+            android:layout_marginTop="8dp"
+            android:paddingRight="200dp"
+            android:hint="Status">
+
+            <AutoCompleteTextView
+                android:id="@+id/et_status"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:inputType="none"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageButton
+            android:id="@+id/btnCheck"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="@color/white"
+            android:paddingLeft="100dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="50dp"
+            android:src="@drawable/ic_check_box_24"
+            app:tint="@color/green"
+            app:layout_constraintTop_toBottomOf="@id/tv_TanggalMelakukanBooking"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/tv_konfirmasi"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="10dp"
+            android:maxLines="2"
+            android:text="Status Konfirmasi - Waktu Konfirmasi"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/btnCheck"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
